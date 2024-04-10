@@ -1,0 +1,14 @@
+@import "../../../../assets/styles/variables-module.scss";
+
+.forget-style {
+  color: map-get($surface-default, Dark);
+}
+
+::ng-deep .forget-btn{
+  &:after {
+    background-color: $iob-green-0;
+  }
+  &:before {
+    background-color: darken($iob-green-0, 15%);
+  }
+}

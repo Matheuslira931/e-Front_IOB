@@ -1,0 +1,36 @@
+
+@import "../../../assets/styles/variables-module.scss";
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input[type="checkbox"]{
+  visibility: hidden;
+  position: absolute;
+}
+input[type="checkbox"] + label:before{
+  height:16px;
+  width:16px;
+  cursor: pointer;
+  margin-right: 12px;
+  content: " ";
+  display:inline-block;
+  vertical-align: middle;
+  border: 1px solid map-get($surface-default-hovered, Dark);
+  background-color: map-get($surface-default-hovered, Light);
+  color: map-get($surface-default, Dark);
+}
+input[type="checkbox"]:checked + label:before{
+  background-color: map-get($color-background-brand, Dark);
+  animation: slidein 0.5s;
+  -webkit-animation: slidein 0.5s;
+}
+input[type="checkbox"] + label:before{
+  border-radius:50%;
+}

@@ -24,14 +24,6 @@ $value-left-desktop-area: 50%;
   }
 }
 
-@media screen and (min-width: $tablet) {
-  .sign-screen {
-    .right-area {
-      width: 100%;
-    }
-  }
-}
-
 @media screen and (min-width: $desktop) {
   .sign-screen {
     flex-direction: row;

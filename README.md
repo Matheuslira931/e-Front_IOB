@@ -1,3 +1,35 @@
+## Description
+
+Esse projeto foi desenvolvido em uma base bem estruturada para da longividade e facil manutenção ao codigo, dentro do projeto é facil de acoplar novos modulos e features, pois tudo esta independente e sem atrelamentos para o funcionamento do mesmo. Sendo componentes e estilos sendo criados para ter o maior controle evitando o max. utilizar bibliotecas externas (criançao seguindo o Style Guide do figma)
+
+usuários para teste {
+  email: "exemplo@gmail.com",
+  password: "0123456789"
+
+  email: "matheus@iob.com",
+  password: "teste"
+
+  email: "lucas@iob.com",
+  password: "teste"
+
+  email: "teste@iob.com",
+  password: "teste"
+}
+
+
+Guia:
+tudo esta dentro do /SRC
+
+validar os estilos e preprocessadores na path: /src/app/styles OBS: e os estilos mais unicos dentro de cada componente.
+
+Validar mock no path: /src/app/mock
+
+Validar imgs no path: /src/app/img
+
+Validar componentes criado e modularizados no path: /src/app/shared
+
+Validar telas/rotas/regras no  path: /src/app/features
+
 # EFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.

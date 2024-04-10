@@ -1,0 +1,14 @@
+@import "../../../../assets/styles/variables-module.scss";
+
+.sign-style {
+  color: map-get($surface-default, Dark);
+}
+
+::ng-deep .sign-btn{
+  &:after {
+    background-color: $iob-green-0;
+  }
+  &:before {
+    background-color: darken($iob-green-0, 15%);
+  }
+}

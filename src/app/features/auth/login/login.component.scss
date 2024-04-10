@@ -1,0 +1,84 @@
+@import "../../../../assets/styles/variables-module.scss";
+
+.login-style {
+  color: map-get($surface-default, Dark);
+}
+
+.form-styles {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
+  .inputs-styles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    .input-style {
+      width: -webkit-fill-available;
+      padding: 16px;
+      border: 1px solid map-get($surface-default-hovered, Dark);
+      background-color: map-get($surface-default-hovered, Light);
+      color: map-get($surface-default, Dark);
+      &:focus-visible {
+        outline: none;
+        border: 1px solid map-get($color-background-brand, Dark);
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+}
+    }
+  }
+}
+
+.checkbox-content {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .extarnal-link-login {
+    color: map-get($color-background-brand, Dark);
+    cursor: pointer;
+  }
+}
+
+.buttons-content {
+  @extend .form-styles;
+  gap: 24px;
+  margin-top: 56px;
+  margin-bottom: 64px;
+}
+
+.register-content {
+  text-align: center;
+  .another-page-login {
+    color: map-get($surface-default, Dark);
+    cursor: pointer;
+    .diferent-color {
+      color: map-get($color-background-brand, Dark);
+    }
+  }
+}
+
+::ng-deep .login-btn{
+  &:after {
+    background-color: $iob-green-0;
+  }
+  &:before {
+    background-color: darken($iob-green-0, 15%);
+  }
+}
+
+::ng-deep .login-btn-google{
+  &:after {
+    background-color: $neutral-dark-1;
+  }
+  &:before {
+    background-color: darken($neutral-dark-1, 15%);
+  }
+}

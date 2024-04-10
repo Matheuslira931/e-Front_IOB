@@ -1,3 +1,52 @@
-<p>
-  login works!
-</p>
+<div class="card-login">
+  <p class="description login-style">Bem-vindo de volta</p>
+  <h4 class="title login-style">Faça login na sua conta</h4>
+  <form [formGroup]="loginForm">
+    <div  class="form-styles">
+      <div class="inputs-styles">
+        <label for="emailInput"class="label-text-default login-style">E-mail</label>
+        <input
+          type="text"
+          id="emailInput"
+          class="input-style"
+          formControlName="inputEmail"
+          placeholder="exemplo@gmail.com"/>
+      </div>
+      <div class="inputs-styles">
+        <label for="passInput" class="label-text-default login-style">Senha</label>
+        <input
+          type="text"
+          id="passInput"
+          class="input-style"
+          formControlName="inputPassword"
+          placeholder="0123456789"/>
+      </div>
+      <div id="mnsAguardCont" *ngIf="message">
+        <p class="alert" id="msnAlertContentCont">
+            {{ message }}
+        </p>
+      </div>
+    </div>
+    <div class="checkbox-content">
+      <app-checkbox content="Lembre de mim"></app-checkbox>
+      <a (click)="redirectToForgetPass()" class="extenal-link extarnal-link-login">Esqueceu sua senha? </a>
+    </div>
+    <div class="buttons-content">
+      <app-buttons
+        (click)="logar()"
+        content="Entrar na conta"
+        customClass="login-btn">
+      </app-buttons>
+      <app-buttons
+        (click)="redirectToGoogle()"
+        content="Ou faça login com o Google"
+        srcImg="../../../assets/img/icon-google.png"
+        altText="icone sobre o Google"
+        customClass="login-btn-google">
+      </app-buttons>
+    </div>
+    <div class="register-content">
+      <a (click)="redirectToSign()" class="another-page-text-default another-page-login">Não tem uma conta? <span class="diferent-color">Cadastre-se</span></a>
+    </div>
+  </form>
+</div>
